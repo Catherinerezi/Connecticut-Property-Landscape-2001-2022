@@ -51,8 +51,6 @@ Jenis Visualisasi	Tujuan
 #Import dan membaca data
 """
 
-!pip install streamlit
-
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 import numpy as np
