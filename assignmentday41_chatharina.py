@@ -245,7 +245,7 @@ df_top = df_group[df_group["Town"].isin(df_group["Town"].value_counts().head(5).
 df_ready = df_clean.copy()
 
 # Tampilkan hasil akhir (siap dipakai untuk analisis)
-display(df_ready.head())
+df_ready.head()
 
 """#Skoring RFM"""
 
