@@ -119,18 +119,24 @@ Cek Outlier kolom numerik
 """
 
 numeric_cols = df.select_dtypes(include=np.number).columns
+numeric_cols = df.select_dtypes(include="number").columns
+rows = []
 
 for col in numeric_cols:
     Q1 = df[col].quantile(0.25)
     Q3 = df[col].quantile(0.75)
     IQR = Q3 - Q1
-    lower_bound = Q1 - 1.5 * IQR
-    upper_bound = Q3 + 1.5 * IQR
+    lower = Q1 - 1.5 * IQR
+    upper = Q3 + 1.5 * IQR
 
-    outliers = df[(df[col] < lower_bound) | (df[col] > upper_bound)]
+    outliers = df[(df[col] < lower) | (df[col] > upper)]
     outlier_count = len(outliers)
     outlier_percentage = (outlier_count / len(df)) * 100
-    print(f"{col}: {outlier_count} outliers ({outlier_percentage:.2f}%)")
+
+    rows.append("Kolom": col, "Jumlah Outlier": outlier_count, "% Outlier": f"{outlier_percentage:.2f}%")
+
+outlier_df = pd.DataFrame(rows).sort_values("% Outlier", ascending=False)
+st.dataframe(outlier_df, use_container_width=True)
 
 """Untuk Outlier akan dibiarkan untuk kebutuhan analisis.
 
@@ -149,23 +155,26 @@ suspect_mask = row_strings.str.contains(pattern, case=False, regex=True)
 
 # Tampilkan baris mencurigakan
 suspect_rows = df[suspect_mask]
-print("Baris yang mencurigakan sebagai header duplikat atau tabel bertumpuk:")
-print(suspect_rows)
+st.write("Baris yang mencurigakan sebagai header duplikat atau tabel bertumpuk:")
+if suspect_rows.empty:
+    st.success("Tidak ditemukan baris mencurigakan.")
+else:
+    st.dataframe(suspect_rows, use_container_width=True)
 
 """#Feature Engineering"""
 
 # Hapus baris mencurigakan dari dataset utama
 df_cleaned = df[~suspect_mask].copy()
 df_cleaned.reset_index(drop=True, inplace=True)
-print("Jumlah baris setelah pembersihan:", df_cleaned.shape[0])
+st.write("Jumlah baris setelah pembersihan:", df_cleaned.shape[0])
 
-print("Jumlah baris awal:", df.shape[0])
-print("Jumlah baris setelah penghapusan:", df_cleaned.shape[0])
-print("Jumlah baris yang dihapus:", df.shape[0] - df_cleaned.shape[0])
+st.write("Jumlah baris awal:", df.shape[0])
+st.write("Jumlah baris setelah penghapusan:", df_cleaned.shape[0])
+st.write("Jumlah baris yang dihapus:", df.shape[0] - df_cleaned.shape[0])
 
 row_strings_cleaned = df_cleaned.fillna("").astype(str).agg(' '.join, axis=1)
-print("Masih ada 'multi addresses'? ->", row_strings_cleaned.str.contains("multi addresses", case=False).any())
-print("Masih ada 'serial number'? ->", row_strings_cleaned.str.contains("serial number", case=False).any())
+st.write("Masih ada 'multi addresses'? ->", row_strings_cleaned.str.contains("multi addresses", case=False).any())
+st.write("Masih ada 'serial number'? ->", row_strings_cleaned.str.contains("serial number", case=False).any())
 
 df = df[~suspect_mask].reset_index(drop=True)
 
@@ -299,7 +308,7 @@ base_metrics.columns = ['Address',
 
 property_summary = pd.merge(property_summary, base_metrics, on='Address', how='left')
 
-print(property_summary.columns)
+property_summary.columns
 
 # Versi ringkas untuk membandingkan 2 kolom Address dan Serial Number
 df[['Address', 'Serial Number']].drop_duplicates().head()
