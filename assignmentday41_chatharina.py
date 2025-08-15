@@ -257,39 +257,50 @@ df_top = df_group[df_group["Town"].isin(df_group["Town"].value_counts().head(5).
 # Simpan hasil feature engineering
 df_ready = df_clean.copy()
 
-# Tampilkan hasil akhir (siap dipakai untuk analisis)
-df_ready.head()
-
 """#Skoring RFM"""
 
 property_summary[["recency_days","total_transactions","total_sale_amount"]] = \
     property_summary[["recency_days","total_transactions","total_sale_amount"]].apply(pd.to_numeric, errors="coerce")
 
 # Skor RFM berdasarkan kuartil
-property_summary["R_Score"] = pd.qcut(property_summary["recency_days"], 4, labels=[4,3,2,1], duplicates="drop").astype("Int64").fillna(2).astype(int)
-property_summary["F_Score"] = pd.qcut(property_summary["total_transactions"].rank(method='first'), 4, labels=[1,2,3,4], duplicates="drop").astype("Int64").fillna(2).astype(int)
-property_summary["M_Score"] = pd.qcut(property_summary["total_sale_amount"], 4, labels=[1,2,3,4], duplicates="drop").astype("Int64").fillna(2).astype(int)
-# Gabungkan skor RFM
-property_summary["RFM_Score"] = (
-    property_summary["R_Score"].astype(str) +
-    property_summary["F_Score"].astype(str) +
-    property_summary["M_Score"].astype(str)
-)
+try:
+    property_summary["R_Score"] = pd.qcut(
+        property_summary["recency_days"], 4, labels=[4,3,2,1], duplicates="drop"
+    ).astype("Int64").fillna(2).astype(int)
 
-# Segmentasi berdasarkan skor
-def label_segment(row):
-    if row["R_Score"] == 4 and row["F_Score"] == 4 and row["M_Score"] == 4:
-        return "Best"
-    elif row["F_Score"] >= 3 and row["M_Score"] >= 3:
-        return "Loyal"
-    elif row["R_Score"] <= 2:
-        return "At Risk"
-    else:
-        return "Others"
+    property_summary["F_Score"] = pd.qcut(
+        property_summary["total_transactions"].rank(method='first'), 4, labels=[1,2,3,4], duplicates="drop"
+    ).astype("Int64").fillna(2).astype(int)
 
-property_summary["RFM_Segment"] = property_summary.apply(label_segment, axis=1)
+    property_summary["M_Score"] = pd.qcut(
+        property_summary["total_sale_amount"], 4, labels=[1,2,3,4], duplicates="drop"
+    ).astype("Int64").fillna(2).astype(int)
 
-property_summary.head()
+    # Gabungkan skor RFM
+    property_summary["RFM_Score"] = (
+        property_summary["R_Score"].astype(str) +
+        property_summary["F_Score"].astype(str) +
+        property_summary["M_Score"].astype(str)
+    )
+
+    # Segmentasi
+    def label_segment(row):
+        if row["R_Score"] == 4 and row["F_Score"] == 4 and row["M_Score"] == 4:
+            return "Best"
+        elif row["F_Score"] >= 3 and row["M_Score"] >= 3:
+            return "Loyal"
+        elif row["R_Score"] <= 2:
+            return "At Risk"
+        else:
+            return "Others"
+
+    property_summary["RFM_Segment"] = property_summary.apply(label_segment, axis=1)
+    st.write("RFM selesai")
+
+except Exception as e:
+    st.error("Error di blok RFM:")
+    st.exception(e)
+    st.stop()
 
 base_metrics = df.groupby('Address').agg({
     'Serial Number': lambda x: x.mode().iloc[0] if not x.mode().empty else x.iloc[0],
