@@ -133,7 +133,7 @@ for col in numeric_cols:
     outlier_count = len(outliers)
     outlier_percentage = (outlier_count / len(df)) * 100
 
-    rows.append("Kolom": col, "Jumlah Outlier": outlier_count, "% Outlier": f"{outlier_percentage:.2f}%")
+    rows.append({"Kolom": col, "Jumlah Outlier": outlier_count, "% Outlier": outlier_pct"})
 
 outlier_df = pd.DataFrame(rows).sort_values("% Outlier", ascending=False)
 st.dataframe(outlier_df, use_container_width=True)
