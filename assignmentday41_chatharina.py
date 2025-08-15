@@ -136,7 +136,7 @@ for col in numeric_cols:
     rows.append({
         "Kolom": col, 
         "Jumlah Outlier": outlier_count, 
-        "% Outlier": outlier_pct,
+        "% Outlier": f"{outlier_pct:.2f}%",
     })
 
 outlier_df = pd.DataFrame(rows).sort_values("% Outlier", ascending=False)
