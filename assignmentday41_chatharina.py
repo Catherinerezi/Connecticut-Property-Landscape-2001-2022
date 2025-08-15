@@ -274,7 +274,7 @@ property_summary["RFM_Score"] = (
     property_summary["M_Score"].astype(str)
 )
 
-# Contoh segmentasi berdasarkan skor
+# Segmentasi berdasarkan skor
 def label_segment(row):
     if row["R_Score"] == 4 and row["F_Score"] == 4 and row["M_Score"] == 4:
         return "Best"
@@ -314,7 +314,7 @@ property_summary = pd.merge(property_summary, base_metrics, on='Address', how='l
 
 property_summary.columns
 
-# Versi ringkas untuk membandingkan 2 kolom Address dan Serial Number
+# Membandingkan 2 kolom Address dan Serial Number
 df[['Address', 'Serial Number']].drop_duplicates().head()
 
 """#1. Bagaimana distribusi properti berdasarkan skor RFM, dan segmen mana yang paling mendominasi dalam portofolio properti saat ini?"""
@@ -498,7 +498,7 @@ st.pyplot()
 
 property_summary.head()
 
-# Simpan KESELURUHAN hasil merge
+# Simpan seluruh hasil merge
 property_summary.to_csv(
     "property_summary.csv",
     index=False,
