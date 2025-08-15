@@ -263,10 +263,9 @@ df_ready.head()
 """#Skoring RFM"""
 
 # Skor RFM berdasarkan kuartil
-property_summary["R_Score"] = pd.qcut(property_summary["recency_days"], 4, labels=[4,3,2,1]).astype(int)
-property_summary["F_Score"] = pd.qcut(property_summary["total_transactions"].rank(method='first'), 4, labels=[1,2,3,4]).astype(int)
-property_summary["M_Score"] = pd.qcut(property_summary["total_sale_amount"], 4, labels=[1,2,3,4]).astype(int)
-
+property_summary["R_Score"] = pd.qcut(property_summary["recency_days"], 4, labels=[4,3,2,1], duplicates="drop").astype(int)
+property_summary["F_Score"] = pd.qcut(property_summary["total_transactions"].rank(method='first'), 4, labels=[1,2,3,4], duplicates="drop").astype(int)
+property_summary["M_Score"] = pd.qcut(property_summary["total_sale_amount"], 4, labels=[1,2,3,4], duplicates="drop").astype(int)
 # Gabungkan skor RFM
 property_summary["RFM_Score"] = (
     property_summary["R_Score"].astype(str) +
