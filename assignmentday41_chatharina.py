@@ -306,13 +306,13 @@ df[['Address', 'Serial Number']].drop_duplicates().head()
 
 """#1. Bagaimana distribusi properti berdasarkan skor RFM, dan segmen mana yang paling mendominasi dalam portofolio properti saat ini?"""
 
-plt.figure(figsize=(8, 5))
+fig, ax = plt.subplots(figsize=(8,5))
 sns.countplot(data=property_summary, x="RFM_Segment", order=property_summary["RFM_Segment"].value_counts().index, palette="Set2")
-plt.title("Distribusi Properti Berdasarkan Segmentasi RFM")
-plt.xlabel("RFM Segment")
-plt.ylabel("Jumlah Properti")
-plt.tight_layout()
-plt.show()
+ax.set_title("Distribusi Properti Berdasarkan Segmentasi RFM")
+ax.set_xlabel("RFM Segment")
+ax.set_ylabel("Jumlah Properti")
+fig.tight_layout()
+st.pyplot()
 
 """#Insight Segmentasi:
 1. Best Segment
@@ -351,15 +351,15 @@ plt.show()
 #2. Bagaimana tren rata-rata harga jual properti dari tahun ke tahun, dan apakah terdapat pola yang dapat menginformasikan keputusan investasi atau pengembangan ke depan?
 """
 
-plt.figure(figsize=(8, 5))
+fig, ax = plt.subplots(figsize=(8,5))
 yearly_avg = df.groupby("Year")["Sale Amount"].mean()
 sns.lineplot(x=yearly_avg.index, y=yearly_avg.values)
-plt.title("Tren Rata-rata Harga Properti per Tahun")
-plt.xlabel("Tahun")
-plt.ylabel("Rata-rata Sale Amount")
-plt.ylim(bottom=0)
-plt.tight_layout()
-plt.show()
+ax.set_title("Tren Rata-rata Harga Properti per Tahun")
+ax.set_xlabel("Tahun")
+ax.set_ylabel("Rata-rata Sale Amount")
+ax.set_ylim(bottom=0)
+fig.tight_layout()
+st.pyplot()
 
 """#Insight Tahun-per-Tahun
 1. Periode Awal (2001–2005)
@@ -387,14 +387,14 @@ plt.show()
 #3. Kota mana saja yang memiliki volume transaksi properti tertinggi, dan bagaimana persebarannya menunjukkan potensi atau dinamika pasar?
 """
 
-plt.figure(figsize=(8, 5))
+fig, ax = plt.subplots(figsize=(8,5))
 top_towns = df["Town"].value_counts().head(10)
 sns.barplot(x=top_towns.values, y=top_towns.index, palette="viridis")
-plt.title("10 Kota dengan Jumlah Transaksi Tertinggi")
-plt.xlabel("Jumlah Transaksi")
-plt.ylabel("Kota")
-plt.tight_layout()
-plt.show()
+ax.set_title("10 Kota dengan Jumlah Transaksi Tertinggi")
+ax.set_xlabel("Jumlah Transaksi")
+ax.set_ylabel("Kota")
+fig.tight_layout()
+st.pyplot()
 
 """#Insight Berdasarkan Visualisasi
 Bar chart menampilkan 10 kota teratas berdasarkan jumlah transaksi properti. Berikut beberapa insight utama dari grafik tersebut:
@@ -419,11 +419,12 @@ Bar chart menampilkan 10 kota teratas berdasarkan jumlah transaksi properti. Ber
 """
 
 pivot = df_top.pivot_table(index="Town", columns="Price Category", values="Serial Number", aggfunc="count")
-pivot.plot(kind="bar", stacked=True, colormap="Set2", figsize=(8,5))
-plt.title("Distribusi Kategori Harga Properti per Kota (Top 5)")
-plt.ylabel("Jumlah Properti")
-plt.tight_layout()
-plt.show()
+fig, ax = plt.subplots(figsize=(8,5))
+pivot.plot(kind="bar", stacked=True, colormap="Set2", ax=ax)
+ax.set_title("Distribusi Kategori Harga Properti per Kota (Top 5)")
+ax.set_ylabel("Jumlah Properti")
+fig.tight_layout()
+st.pyplot()
 
 """#Insight dari Visualisasi
 1. Dominasi Segmen <$500K:
@@ -451,10 +452,9 @@ plt.show()
 #5. Apakah terdapat hubungan kuat antara harga jual dengan nilai asesmen dan sales ratio, yang dapat digunakan sebagai indikator valuasi atau strategi harga properti?
 """
 
-plt.figure(figsize=(7, 3))
+fig, ax = plt.subplots(figsize=(7, 3))
 numeric_cols = ['Sale Amount', 'Assessed Value', 'Sales Ratio']
 corr = df[numeric_cols].corr()
-
 sns.heatmap(
     corr,
     annot=True,
@@ -463,9 +463,9 @@ sns.heatmap(
     vmin=-1,  # Batas bawah skala korelasi
     vmax=1    # Batas atas skala korelasi
 )
-plt.title("Heatmap Korelasi antar Variabel Numerik")
-plt.tight_layout()
-plt.show()
+ax.set_title("Heatmap Korelasi antar Variabel Numerik")
+fig.tight_layout()
+st.pyplot()
 
 """#Insight dari Heatmap
 1. Sale Amount vs. Assessed Value: Korelasi Lemah Positif (0.12)
