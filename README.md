@@ -32,3 +32,15 @@ External RFM merge
 Finalization for visualization
 - Output a clean, analysis-ready file: property_summary_clean.csv with structured columns.
 - Remove duplicate column names and validate joins to support smooth, interactive exploration in Power BI.
+
+# Explanatory Data Analysis Visualizations Carried Out
+
+Visualization Type Purpose:
+1. How is the distribution of properties based on RFM scores, and which segment most dominates the current property portfolio?
+
+The line chart belows traces Connecticut’s property market from the early 2000s to 2022 and shows a long upward trajectory punctuated by short-lived dips, before culminating in a clear peak around 2021–2022. Over the full window, cumulative growth reaches +145.82%, consistent with a cycle propelled by ultra-low Federal Reserve rates and a work-from-home migration out of New York City that boosted suburban demand. The curve then bends downward after the peak, signalling that price momentum has eased and that the market has transitioned from rapid appreciation to consolidation.
+
+2. How does the average property sale price evolve year on year, and are there patterns that could inform future investment or development decisions?
+4. Which cities have the highest volumes of property transactions, and how does their distribution indicate market potential or dynamics?
+5. How is the distribution of property prices in the most transaction-active cities, and which cities tend to have premium property markets or lower-middle-income markets?
+6. Is there a strong relationship between sale price, assessed value, and the sales ratio that can be used as indicators for valuation or pricing strategy?
