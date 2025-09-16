@@ -39,7 +39,7 @@ Finalization for visualization
 # Explanatory Data Analysis Visualizations Carried Out
 
 Visualization Type Purpose:
-## 1. How is the distribution of properties based on RFM scores, and which segment most dominates the current property portfolio?
+## 1. How does the average property sale price evolve year on year, and are there patterns that could inform future investment or development decisions?
 
 The line chart belows traces Connecticut’s property market from the early 2000s to 2022 and shows a long upward trajectory punctuated by short-lived dips, before culminating in a clear peak around 2021–2022. Over the full window, cumulative growth reaches +145.82%, consistent with a cycle propelled by ultra-low Federal Reserve rates and a work-from-home migration out of New York City that boosted suburban demand. The curve then bends downward after the peak, signalling that price momentum has eased and that the market has transitioned from rapid appreciation to consolidation.
 
@@ -51,7 +51,19 @@ The line chart belows traces Connecticut’s property market from the early 2000
 
 **Strategic direction.** In a high interest rate era, prioritise the most resilient segments: towns with diversified employment bases, mid-price brackets with persistent user demand, and properties with defensible rental yields. Use RFM based portfolio segmentation to identify “champion” and “loyal” cohorts that continue to transact despite tighter credit, and track how their Sales Ratios evolve relative to assessments. Practical next steps include higher stress for testing prices under alternative rate scenarios, deepening the level of the city, drill downs to separate premium from value markets, and refreshing dashboards to highlight segments where liquidity and pricing remain robust.
 
-2. How does the average property sale price evolve year on year, and are there patterns that could inform future investment or development decisions?
+## 2. How is the distribution of properties based on RFM scores, and which segment most dominates the current property portfolio?
+
+The pie chart below shows the portfolio’s unit distribution by RFM segment. While “Others” accounts for the largest share of properties by count, the “Best” and “Loyal” segments punch well above their weight, contributing a disproportionate share of total sales value thanks to higher average transaction amounts and healthier Sales Ratios. The “At Risk” cohort still represents a sizable block of inventory, indicating meaningful reactivation potential if pricing and outreach are tuned correctly.
+
+**Primary Target: $200k–$500k**. This bracket is the market’s sweet spot: it dominates both transaction volume and aggregate sales, offering strong liquidity with acceptable margins. Listings in this band tend to clear faster, attract broader buyer pools, and remain resilient as rates fluctuate.
+
+**Strategic Recommendations:**
+- Prioritize “Best” & “Loyal” in $200k–$500k: Concentrate inventory, marketing spend, and agent capacity here. Use targeted campaigns, faster underwriting/pre-approval flows, and tight SLA on showings and closings.
+- Secondary Opportunity “At Risk”: Run re-engagement plays (time based bound incentives, payment plans, light CapEx refreshes) to convert dormant demand, while monitoring churn risk and Sales Ratio slippage.
+- Don’t ignore “Others”: Nurture this pool with education, post sale service, and upgrade paths to graduate promising leads into the “Loyal” tier.
+- Operational cadence: Track conversion rate, time on market, and 'Sales Ratio' by segment and price band making refresh RFM scores on a regular schedule is mandatory to keep targeting precise.
+- Geo focus: Emphasize towns where $200k–$500k already concentrates transactions, and be selective in premium niches unless yield/absorption are clearly met.
+
 4. Which cities have the highest volumes of property transactions, and how does their distribution indicate market potential or dynamics?
 5. How is the distribution of property prices in the most transaction-active cities, and which cities tend to have premium property markets or lower-middle-income markets?
 6. Is there a strong relationship between sale price, assessed value, and the sales ratio that can be used as indicators for valuation or pricing strategy?
