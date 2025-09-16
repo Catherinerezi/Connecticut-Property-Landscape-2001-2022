@@ -10,7 +10,7 @@ This is my personal project to learn how to build a customer segmentation. The m
 The following are steps I took to prepare the dataset before loading it into Power BI:
 
 Data types & formatting:
-- Cast numeric and date fields to proper types (e.g., Sale Amount, Assessed Value → numeric; Date Recorded → datetime; List Year → integer).
+- Cast numeric and date fields to proper types (e.g., Sale Amount, Assessed Value (numeric); Date Recorded (datetime); List Year (integer)).
 - Standardize calculated fields (Sales Ratio, transaction_value) to a consistent numeric format.
 
 Missing values:
