@@ -1,6 +1,9 @@
 # Decoding Connecticut’s Property Landscape: Trends, Segments, and Price Behaviors (2001–2022)
 This is my personal project to learn how to build a customer segmentation. The main showcase of this project is an RFM segmentation that will change dynamically based on the selected transaction period towards trends, segments, and price behaviors for over a decade (2001-2022) in landscape of property. The data is aquired from [data.gov](https://catalog.data.gov/dataset/real-estate-sales-2001-2018). This dataset captures property sales across Connecticut from 2001 to 2022. Each record includes the sale price (Sale Amount), the tax assessment (Assessed Value), the town, property type, and the transaction date. A key derived measure is the Sales Ratio - sale price divided by assessed value, useful for comparing market prices with assessments and analyzing trends by time, town, and property category. 
-![Preview](https://github.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/blob/main/assets/property_landscare_dasboard.png)
+
+<p align="center">
+  <img src="assets/property_landscape_dashboard.png" alt="Dashboard preview" width="700">
+</p>
 
 # Attachments
 - [Data processing (indonesian)](https://colab.research.google.com/drive/17JmBtTshNQwTCpHCfeGvTGX-6js-4aA7?usp=sharing)
@@ -41,7 +44,7 @@ Visualization Type Purpose:
 The line chart belows traces Connecticut’s property market from the early 2000s to 2022 and shows a long upward trajectory punctuated by short-lived dips, before culminating in a clear peak around 2021–2022. Over the full window, cumulative growth reaches +145.82%, consistent with a cycle propelled by ultra-low Federal Reserve rates and a work-from-home migration out of New York City that boosted suburban demand. The curve then bends downward after the peak, signalling that price momentum has eased and that the market has transitioned from rapid appreciation to consolidation.
 
 <p align="center">
-  <img src="assets/line%20chart.png" alt="How Property Sale Prices Have Evolved Over the Years" width="400">
+  <img src="assets/line%20chart.png" alt="How Property Sale Prices Have Evolved Over the Years" width="500">
 </p>
 
 **Current conditions (2025).** As borrowing costs have risen, affordability has tightened and both transaction volumes and price gains have cooled noticeably. The cooling is not uniform: higher-priced segments are typically more rate-sensitive, while mid-market family housing and rental-grade assets tend to adjust more gradually. Monitoring the **Sales Ratio** (sale amount / assessed value) alongside town and property-type splits helps distinguish cyclical softening from structural resilience.
