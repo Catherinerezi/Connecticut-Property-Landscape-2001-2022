@@ -73,11 +73,11 @@ The pie chart below shows the portfolio’s unit distribution by RFM segment. Wh
 The visuals on below combine a pivot table of total sales by RFM segment and city with a bar chart of price category distribution for the top five towns. Together, they show where value is created and at what price bands transactions actually clear.
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/blob/main/assets/table.png" alt="Which cities have the highest volumes of property transactions, and how does their distribution indicate market potential or dynamics" width="300">
+  <img src="https://github.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/blob/main/assets/table.png" alt="Which cities have the highest volumes of property transactions, and how does their distribution indicate market potential or dynamics" width="400">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/blob/main/assets/stacked_bar.png" alt="Which cities have the highest volumes of property transactions, and how does their distribution indicate market potential or dynamics" width="300">
+  <img src="https://github.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/blob/main/assets/stacked_bar.png" alt="Which cities have the highest volumes of property transactions, and how does their distribution indicate market potential or dynamics" width="500">
 </p>
 
 **Market epicenters: Stamford & Norwalk.**
