@@ -1,1 +1,1 @@
-# assignmentday41_Chatharina
+# Decoding Connecticut’s Property Landscape: Trends, Segments, and Price Behaviors (2001–2022)
