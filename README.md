@@ -68,6 +68,23 @@ The pie chart below shows the portfolio’s unit distribution by RFM segment. Wh
 - Operational cadence: Track conversion rate, time on market, and 'Sales Ratio' by segment and price band making refresh RFM scores on a regular schedule is mandatory to keep targeting precise.
 - Geo focus: Emphasize towns where $200k–$500k already concentrates transactions, and be selective in premium niches unless yield/absorption are clearly met.
 
-4. Which cities have the highest volumes of property transactions, and how does their distribution indicate market potential or dynamics?
+## 3. Which cities have the highest volumes of property transactions, and how does their distribution indicate market potential or dynamics?
+
+The visuals on below combine a pivot table of total sales by RFM segment and city with a bar chart of price category distribution for the top five towns. Together, they show where value is created and at what price bands transactions actually clear.
+
+**Market epicenters: Stamford & Norwalk.**
+These two cities lead on total sales value and host a high concentration of “Best” and “Loyal” customers. Their mix skews more heavily toward the $500k–$1M+ tiers than peers, which lifts aggregate sales despite fewer units than "high volume" or "lower-priced" markets. Stamford, in particular, shows strength across segments, suggesting a broad based demand rather than single-price-point story.
+
+**Volume anchors: Bridgeport & New Haven.**
+These markets contribute substantial unit volume, with transactions concentrated in the sub-$500k bands. Liquidity is stronger here, which is useful for rapid turnover, entry level buyers friendly, and plays good for reactivation for the “At Risk” segment.
+
+**Mid-market stability: Waterbury (and similar profiles).**
+A pronounced concentration in the $200k–$500k range supports steady absorption and predictable Sales Ratios, making these towns reliable for sales pipeline health and inventory rotation.
+
+**Development opportunities.**
+- Primary priority: Double down on Stamford, allocate inventory and marketing to segments with proven conversion (especially “Best”/“Loyal”) across the $200k–$1M+ spectrum.
+- Next wave: Expand selectively in Norwalk and scout adjacent towns exhibiting rising shares of “Best”/“Loyal” buyers and healthy Sales Ratios within $200k–$500k.
+- Operational focus: Track segment mix, price absorption, real time market, and Sales Ratio by city to tune promotions, financing options, and agent capacity where they yield the highest ROI.
+
 5. How is the distribution of property prices in the most transaction-active cities, and which cities tend to have premium property markets or lower-middle-income markets?
 6. Is there a strong relationship between sale price, assessed value, and the sales ratio that can be used as indicators for valuation or pricing strategy?
