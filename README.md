@@ -41,7 +41,7 @@ Visualization Type Purpose:
 The line chart belows traces Connecticut’s property market from the early 2000s to 2022 and shows a long upward trajectory punctuated by short-lived dips, before culminating in a clear peak around 2021–2022. Over the full window, cumulative growth reaches +145.82%, consistent with a cycle propelled by ultra-low Federal Reserve rates and a work-from-home migration out of New York City that boosted suburban demand. The curve then bends downward after the peak, signalling that price momentum has eased and that the market has transitioned from rapid appreciation to consolidation.
 
 <p align="center">
-  <img src="assets/line%20chart.png" alt="How Property Sale Prices Have Evolved Over the Years" width="500">
+  <img src="assets/line%20chart.png" alt="How Property Sale Prices Have Evolved Over the Years" width="300">
 </p>
 
 **Current conditions (2025).** As borrowing costs have risen, affordability has tightened and both transaction volumes and price gains have cooled noticeably. The cooling is not uniform: higher-priced segments are typically more rate-sensitive, while mid-market family housing and rental-grade assets tend to adjust more gradually. Monitoring the **Sales Ratio** (sale amount / assessed value) alongside town and property-type splits helps distinguish cyclical softening from structural resilience.
