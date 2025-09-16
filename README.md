@@ -2,7 +2,7 @@
 This is my personal project to learn how to build a customer segmentation. The main showcase of this project is an RFM segmentation that will change dynamically based on the selected transaction period towards trends, segments, and price behaviors for over a decade (2001-2022) in landscape of property. The data is aquired from [data.gov](https://catalog.data.gov/dataset/real-estate-sales-2001-2018). This dataset captures property sales across Connecticut from 2001 to 2022. Each record includes the sale price (Sale Amount), the tax assessment (Assessed Value), the town, property type, and the transaction date. A key derived measure is the Sales Ratio - sale price divided by assessed value, useful for comparing market prices with assessments and analyzing trends by time, town, and property category. 
 
 <p align="center">
-  <img src="assets/property_landscape_dashboard.png" alt="Dashboard preview" width="700">
+  <img src="https://github.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/blob/main/assets/property_landscare_dasboard.png" alt="Dashboard preview" width="700">
 </p>
 
 # Attachments
