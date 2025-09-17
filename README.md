@@ -99,7 +99,7 @@ A pronounced concentration in the $200k–$500k range supports steady absorption
 The heatmap below summarizes the relationships among Sale Amount, Assessed Value, and the Sales Ratio (sale price ÷ assessed value). Overall, municipal tax assessments appear directionally aligned with market prices: where assessed values are higher, sale prices tend to be higher as well, indicating that the valuation framework broadly tracks underlying market conditions. The association is not uniform across all towns or property types, but it is sufficiently consistent to support comparative analysis and benchmarking.
 
 <p align="center">
-  <img src="ttps://github.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/blob/main/assets/heat%20map.png" alt="Is there a strong relationship between sale price, assessed value, and the sales ratio that can be used as indicators for valuation or pricing strategy" width="500">
+  <img src="https://github.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/blob/main/assets/heat%20map.png" alt="Is there a strong relationship between sale price, assessed value, and the sales ratio that can be used as indicators for valuation or pricing strategy" width="500">
 </p>
 
 At the same time, the chart highlights pockets of dispersion, locations, and sub segments where the Sales Ratio deviates materially from peers. These outliers signal opportunities for targeted reassessment to improve tax equity and valuation fidelity. Typical drivers include rapid micro market shifts, heterogeneous property features not fully captured in historical assessments, and cyclical effects in premium or very low price bands.
