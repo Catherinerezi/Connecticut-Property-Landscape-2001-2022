@@ -94,5 +94,18 @@ A pronounced concentration in the $200k–$500k range supports steady absorption
 - Next wave: Expand selectively in Norwalk and scout adjacent towns exhibiting rising shares of “Best”/“Loyal” buyers and healthy Sales Ratios within $200k–$500k.
 - Operational focus: Track segment mix, price absorption, real time market, and Sales Ratio by city to tune promotions, financing options, and agent capacity where they yield the highest ROI.
 
-5. How is the distribution of property prices in the most transaction-active cities, and which cities tend to have premium property markets or lower-middle-income markets?
-6. Is there a strong relationship between sale price, assessed value, and the sales ratio that can be used as indicators for valuation or pricing strategy?
+## 4. Is there a strong relationship between sale price, assessed value, and the sales ratio that can be used as indicators for valuation or pricing strategy?
+
+The heatmap below summarizes the relationships among Sale Amount, Assessed Value, and the Sales Ratio (sale price ÷ assessed value). Overall, municipal tax assessments appear directionally aligned with market prices: where assessed values are higher, sale prices tend to be higher as well, indicating that the valuation framework broadly tracks underlying market conditions. The association is not uniform across all towns or property types, but it is sufficiently consistent to support comparative analysis and benchmarking.
+
+At the same time, the chart highlights pockets of dispersion, locations, and sub segments where the Sales Ratio deviates materially from peers. These outliers signal opportunities for targeted reassessment to improve tax equity and valuation fidelity. Typical drivers include rapid micro market shifts, heterogeneous property features not fully captured in historical assessments, and cyclical effects in premium or very low price bands.
+
+**What this means operationally:**
+- Use the Sales Ratio distribution (by town and property type) to flag properties for review, e.g., ratios persistently > 1.3 or < 0.7, or clusters that diverge from local norms.
+- Refit valuations with recent comparable sales, and supplement with features such as age, lot size, renovations, and amenity scores to reduce bias.
+- Monitor correlation stability over time as a weakening link between assessed and transacted values in a locality is an early warning for drift.
+- Report a concise dashboard: median Sales Ratio, interquartile range, and share of outliers, refreshed quarterly, to guide reassessment queues.
+
+In short, tax valuations are generally accurate at a system level, but in data driven, locality specific review process, should be guided by the observed correlations, and the Sales Ratio would sharpen fairness and align assessments more closely with current market reality.
+
+6. How is the distribution of property prices in the most transaction-active cities, and which cities tend to have premium property markets or lower-middle-income markets?
