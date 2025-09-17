@@ -116,4 +116,8 @@ In short, tax valuations are generally accurate at a system level, but in data d
 
 The bar chart below breaks down property counts by price range (Under $100k, $100k–$200k, $200k–$300k, $300k–$500k, Over $500k) and overlays the RFM segments (At Risk, Best, Loyal, Others). The pattern validates the segmentation logic: “Best” and “Loyal” skew toward the $300k–$500k and $500k+ bands, where ticket sizes are higher and Sales Ratios typically healthier. By contrast, “At Risk” concentrates in the $100k–$300k (and Under $100k) ranges—large in volume but with lower average value and a wider dispersion in outcomes. “Others” remain broadly distributed, supplying incremental units but not driving top-line value to the same degree.
 
+<p align="center">
+  <img src="https://github.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/blob/main/assets/bar_chart.png" alt="How are property counts distributed across price bands by RFM segment which bands are dominated by where to prioritise premium listings, and where to run value-uplift plays" width="300">
+</p>
+
 **What this means for execution.** Prioritise “Best” and “Loyal” inventory for premium positioning and fast turn—tight SLAs for showings and underwriting, pre approval workflows, and targeted campaigns that emphasise move-in readiness and differentiated features. For the “At Risk” cohort, the opportunity lies in value uplift: light renovations, staging, or market repositioning to migrate qualifying assets into the $200k–$500k sweet spot where absorption and liquidity are strongest. Monitor conversion rate, days on market, and Sales Ratio by segment and price band to keep the playbook adaptive as rates and local demand shift.
