@@ -316,9 +316,10 @@ ax.set_title("Heatmap Korelasi antar Variabel Numerik")
 fig.tight_layout()
 st.pyplot()
 
-"""#Untuk Stream Lit"""
-
-st.download_button("Download property_summary.csv",
-  data=open("property_summary.csv","rb"),
-  file_name="property_summary.csv",
-  mime="text/csv")
+csv_bytes = df.to_csv(index=False).encode("utf-8")
+st.download_button(
+    label="Download property_summary.csv",
+    data=csv_bytes,
+    file_name="property_summary.csv",
+    mime="text/csv",
+)
