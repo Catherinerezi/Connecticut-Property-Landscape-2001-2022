@@ -42,8 +42,6 @@ if not st.session_state.get("_go"):
     if st.button("Mulai"): st.session_state["_go"] = True
     else: st.stop()
 
-"""#Data Understanding"""
-
 df.head()
 
 df.describe().T
@@ -52,11 +50,7 @@ df.shape
 
 df.info()
 
-"""#Cek Duplikat"""
-
 df.duplicated().sum()
-
-"""#Cek Missing Value"""
 
 df.isnull().sum()
 
@@ -70,10 +64,6 @@ missing_percentage = df.isnull().sum()/df.shape[0]*100
 df['transaction_value'] = df['Sale Amount']
 
 df[['Assessed Value', 'Sale Amount', 'transaction_value']].describe()
-
-
-"""Cek Outlier kolom numerik
-"""
 
 numeric_cols = df.select_dtypes(include=np.number).columns
 numeric_cols = df.select_dtypes(include="number").columns
@@ -106,7 +96,6 @@ pattern = r"(serial number|list year|date recorded|sale amount|address|assessed 
 suspect_mask = row_strings.str.contains(pattern, case=False, regex=True)
 
 suspect_rows = df[suspect_mask]
-st.write("Baris yang mencurigakan sebagai header duplikat atau tabel bertumpuk:")
 if suspect_rows.empty:
     st.success("Tidak ditemukan baris mencurigakan.")
 else:
