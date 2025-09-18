@@ -15,15 +15,20 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.preprocessing import MinMaxScaler
 import os
-import gdown
+import tempfile, gdown
 import streamlit as st
 import csv
 import requests
-import os
 
-file_id = "13uUN5CQ3WRjbzlhgDc1l3Vy05Tf0dEvg"
-url = f"https://drive.google.com/file/d/13uUN5CQ3WRjbzlhgDcl13Vy05Tf0dEvg/view?usp=sharing={file_id}"
-output_path = "data/Real_Estate_Sales_2001-2022_GL.csv"
+@st.cache_data(show_spinner=False)
+def load_data_from_drive(file_id: str) -> pd.DataFrame:
+    file_id = "13uUN5CQ3WRjbzlhgDcl13Vy05Tf0dEvg"
+    url = f"https://drive.google.com/file/d/13uUN5CQ3WRjbzlhgDcl13Vy05Tf0dEvg/view?usp=share_linkfile_id}"
+    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".csv")
+    gdown.download(url, tmp.name, quiet=True)
+    return pd.read_csv(tmp.name)
+
+df = load_data_from_drive("13uUN5CQ3WRjbzIhgDc13Vy05Tf0dEvg")
 
 os.makedirs("data", exist_ok=True)
 
@@ -316,7 +321,7 @@ ax.set_title("Heatmap Korelasi antar Variabel Numerik")
 fig.tight_layout()
 st.pyplot()
 
-csv_bytes = df.to_csv(index=False).encode("utf-8")
+csv_bytes = property_summary.to_csv(index=False).encode("utf-8")  # atau df.to_csv(...)
 st.download_button(
     label="Download property_summary.csv",
     data=csv_bytes,
