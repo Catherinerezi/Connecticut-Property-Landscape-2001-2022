@@ -21,17 +21,11 @@ import csv
 import requests
 
 @st.cache_data(show_spinner=False)
-def load_data_from_drive(file_id: str) -> pd.DataFrame:
-    # format URL yang benar untuk gdown
-    url = f"https://drive.google.com/uc?id={FILE_ID}"
-    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".csv")
-    gdown.download(url, tmp.name, quiet=True)
-    return pd.read_csv(tmp.name)
+def load_data_from_release() -> pd.DataFrame:
+    url = "https://github.com/<USER>/<REPO>/releases/download/<TAG>/<FILENAME>.csv"
+    return pd.read_csv(url)
 
-FILE_ID = "13uUN5CQ3WRjbzIhgDc11 3Vy05Tf0dEvg".replace(" ", "")
-df = load_data_from_drive(FILE_ID)
-
-df = load_data_from_drive("13uUN5CQ3WRjbzIhgDc13Vy05Tf0dEvg")
+df = load_data_from_release()
 
 st.set_page_config(page_title="Real Estate", layout="wide")
 
