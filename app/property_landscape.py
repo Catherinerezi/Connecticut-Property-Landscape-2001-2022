@@ -22,8 +22,9 @@ import requests
 
 @st.cache_data(show_spinner=False)
 def load_data_from_release() -> pd.DataFrame:
-    url = "https://github.com/<USER>/<REPO>/releases/download/<TAG>/<FILENAME>.csv"
-    return pd.read_csv(url)
+    url = "https://raw.githubusercontent.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/Real_Estate_Sales_2001-2022_GL(1).csv"
+    df = pd.read_csv(url)
+    return st.dataframe(df)
 
 df = load_data_from_release()
 
