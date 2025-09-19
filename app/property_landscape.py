@@ -128,6 +128,11 @@ reference_date = realestate_summary['Date Recorded'].max()
 realestate_summary['Data Recorded'] = (reference_date - realestate_summary['Date Recorded']).dt.days
 
 # Agregasi per properti (berdasarkan alamat)
+for col in ["Sale Amount", "Assessed Value", "Sales Ratio"]:
+    df[col] = pd.to_numeric(df[col], errors="coerce")  
+
+df["Date Recorded"] = pd.to_datetime(df["Date Recorded"], errors="coerce")
+
 property_summary = df.groupby('Address').agg(
     town=('Town', 'first'),
     list_year=('List Year', 'min'),
