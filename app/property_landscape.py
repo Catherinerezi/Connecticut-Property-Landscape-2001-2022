@@ -22,12 +22,12 @@ import requests
 
 @st.cache_data(show_spinner=False)
 def load_data_from_release() -> pd.DataFrame:
-    url = "https://raw.githubusercontent.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/Real_Estate_Sales_2001-2022_GL(1).csv"
+    url = "https://raw.githubusercontent.com/Catherinerezi/Connecticut-Property-Landscape-2001-2022/main/Real_Estate_Sales_2001-2022_GL(1).csv"
     df = pd.read_csv(url)
-    return st.dataframe(df)
+    return df
 
 df = load_data_from_release()
-
+st.dataframe(df)
 st.set_page_config(page_title="Real Estate", layout="wide")
 
 if not st.session_state.get("_go"):
